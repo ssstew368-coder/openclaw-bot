@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: sore-agent
+    runtime: node
+    buildCommand: npm install --ignore-scripts --legacy-peer-deps --no-optional
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OPENCLAW_CONFIG
+        value: ./openclaw.json
+      - key: NODE_OPTIONS
+        value: --dns-result-order=ipv4first
