@@ -1,0 +1,39 @@
+{
+  "agent": {
+    "name": "Soré",
+    "owner": "Steven"
+  },
+  "models": {
+    "default": "google/gemini-2.0-flash",
+    "coding": "groq/llama-3.3-70b-versatile"
+  },
+  "providers": {
+    "google": {
+      "apiKey": "${GEMINI_API_KEY}"
+    },
+    "groq": {
+      "apiKey": "${GROQ_API_KEY}"
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "${TELEGRAM_BOT_TOKEN}",
+      "dmPolicy": "pairing"
+    }
+  },
+  "gateway": {
+    "bind": "lan",
+    "port": 18789,
+    "auth": {
+      "enabled": false
+    }
+  },
+  "soul": {
+    "language": "fr",
+    "instructions": "Tu t'appelles Soré. Tu es l'agent IA personnel de Steven. Tu parles toujours en français. Tu apprends ses habitudes, tu te souviens de tout ce qu'il te dit. Tu es spécialisé dans le code Python et tu peux modifier, lire et exécuter des fichiers. Tu es proactif et prends des initiatives pour aider Steven."
+  },
+  "hooks": {
+    "session-memory": true
+  }
+}
