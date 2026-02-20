@@ -1,0 +1,11 @@
+{
+  "name": "sore-agent",
+  "version": "1.0.0",
+  "description": "Soré - Agent IA personnel de Steven",
+  "scripts": {
+    "start": "openclaw gateway"
+  },
+  "dependencies": {
+    "openclaw": "latest"
+  }
+}
